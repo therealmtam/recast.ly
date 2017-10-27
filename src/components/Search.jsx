@@ -1,6 +1,10 @@
-var Search = () => (
+var Search = ({handleInputChange}) => (
   <div className="search-bar form-inline">
-    <input className="form-control" type="text" />
+    <input 
+      className="form-control" 
+      type="text"
+      onChange={function(event) { handleInputChange(event.target.value); } } 
+    />
     <button className="btn hidden-sm-down">
       <span className="glyphicon glyphicon-search"></span>
     </button>
